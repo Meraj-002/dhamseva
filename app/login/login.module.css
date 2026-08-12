@@ -1,0 +1,454 @@
+.page {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family:
+    "Trebuchet MS",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #111111;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 36.25%;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+.loginSection {
+  position: relative;
+
+  width: 100%;
+  height: 63.75%;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3.4% 5.2% 1.5%;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 3.6%;
+}
+
+.heading h1 {
+  margin: 0;
+
+  font-size: clamp(24px, 4.8vw, 35px);
+  line-height: 1.15;
+
+  font-weight: 500;
+  color: #111111;
+}
+
+.heading p {
+  margin: 2.2% 0 0;
+
+  font-size: clamp(15px, 3.25vw, 24px);
+  line-height: 1.25;
+
+  color: #999999;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.inputBox {
+  width: 100%;
+  height: 112px;
+
+  flex-shrink: 0;
+
+  border: 2px solid #dedede;
+  border-radius: 31px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 22px;
+
+  margin-bottom: 24px;
+
+  background: #ffffff;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.iconCircle {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #fff5e5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 22px;
+}
+
+.iconCircle span {
+  font-size: 32px;
+
+  color: #f28a00;
+}
+
+/* =========================
+   INPUT CONTENT
+========================= */
+
+.inputContent {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.inputContent label {
+  display: block;
+
+  font-size: 21px;
+  line-height: 1.1;
+
+  color: #a5a5a5;
+
+  margin-bottom: 10px;
+}
+
+.inputContent input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 22px;
+  line-height: 1.15;
+
+  color: #4d4d4d;
+
+  padding: 0;
+}
+
+.inputContent input::placeholder {
+  color: #4d4d4d;
+  opacity: 1;
+}
+
+/* =========================
+   PASSWORD EYE
+========================= */
+
+.eyeButton {
+  border: none;
+  background: transparent;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  font-size: 25px;
+
+  color: #555555;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgotButton {
+  align-self: flex-end;
+
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  margin-top: 0;
+  margin-bottom: 38px;
+
+  font-family: inherit;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #d46a16;
+
+  cursor: pointer;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.loginButton {
+  width: 100%;
+  height: 88px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 34px;
+
+  background: #f36c00;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 30px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 10px rgba(243, 108, 0, 0.18);
+}
+
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* =========================
+   REGISTER
+========================= */
+
+.registerArea {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-bottom: 1%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  white-space: nowrap;
+
+  font-size: 22px;
+  color: #777777;
+}
+
+.registerArea button {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  font-family: inherit;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #d46a16;
+
+  cursor: pointer;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+  align-self: flex-start;
+
+  margin: -10px 0 12px;
+
+  color: #d32f2f;
+
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE SCALING
+========================= */
+
+@media (max-width: 600px) {
+  .loginSection {
+    padding-left: 5.1%;
+    padding-right: 5.1%;
+  }
+
+  .inputBox {
+    height: 112px;
+
+    border-radius: 30px;
+
+    padding-left: 22px;
+    padding-right: 16px;
+
+    margin-bottom: 24px;
+  }
+
+  .iconCircle {
+    width: 76px;
+    height: 76px;
+
+    margin-right: 20px;
+  }
+
+  .inputContent label {
+    font-size: 21px;
+  }
+
+  .inputContent input {
+    font-size: 21px;
+  }
+
+  .forgotButton {
+    font-size: 21px;
+    margin-bottom: 38px;
+  }
+
+  .loginButton {
+    height: 88px;
+    border-radius: 34px;
+
+    font-size: 29px;
+  }
+
+  .registerArea {
+    font-size: 20px;
+  }
+
+  .registerArea button {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-height: 750px) {
+  .loginSection {
+    padding-top: 2%;
+  }
+
+  .heading {
+    margin-bottom: 2%;
+  }
+
+  .inputBox {
+    height: 76px;
+    border-radius: 22px;
+
+    margin-bottom: 12px;
+
+    padding-left: 14px;
+  }
+
+  .iconCircle {
+    width: 52px;
+    height: 52px;
+
+    margin-right: 14px;
+  }
+
+  .iconCircle span {
+    font-size: 22px;
+  }
+
+  .inputContent label {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .inputContent input {
+    font-size: 16px;
+  }
+
+  .eyeButton {
+    font-size: 19px;
+  }
+
+  .forgotButton {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .loginButton {
+    height: 62px;
+    border-radius: 24px;
+
+    font-size: 21px;
+  }
+
+  .registerArea,
+  .registerArea button {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 601px) {
+  .page {
+    width: 430px;
+    margin: 0 auto;
+  }
+}
