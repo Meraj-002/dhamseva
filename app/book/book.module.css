@@ -1,0 +1,700 @@
+/* =========================================================
+   BOOK PAGE
+   MOBILE FIRST
+   ========================================================= */
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(255, 235, 215, 0.62),
+      rgba(255, 225, 207, 0.72)
+    ),
+    url("/images/dham-bg.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+
+  color: #111;
+
+  padding: 28px 18px 125px;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 22px;
+}
+
+.heroIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+.hero p {
+  margin: 10px 0 0;
+
+  font-size: 22px;
+  line-height: 1.3;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   WARNING CARD
+   ========================================================= */
+
+.warningCard {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  background: rgba(255, 245, 230, 0.94);
+
+  border: 1.5px solid #f4c875;
+
+  border-radius: 26px;
+
+  padding: 22px 22px;
+
+  margin-bottom: 22px;
+
+  box-shadow: 0 4px 14px rgba(140, 75, 20, 0.08);
+}
+
+.warningIcon {
+  flex-shrink: 0;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #ffab19;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.warningContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.warningContent h3 {
+  margin: 0 0 8px;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+.warningContent p {
+  margin: 0;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  color: #777;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CALENDAR
+   ========================================================= */
+
+.calendarCard {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-radius: 30px;
+
+  padding: 28px 18px 30px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.calendarHeader {
+  display: grid;
+  grid-template-columns: 45px 1fr 45px;
+
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.calendarHeader h2 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.monthArrow {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.weekDays span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  row-gap: 18px;
+}
+
+.emptyDate {
+  min-height: 42px;
+}
+
+.dateButton {
+  width: 42px;
+  height: 42px;
+
+  justify-self: center;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.availableDate {
+  color: #111;
+}
+
+.disabledDate {
+  color: #e5e5e5;
+
+  cursor: default;
+}
+
+.selectedDate {
+  background: #ff9d00;
+  color: white;
+
+  font-weight: 800;
+
+  box-shadow: 0 3px 8px rgba(255, 157, 0, 0.3);
+}
+
+
+/* =========================================================
+   SELECTED DATE
+   ========================================================= */
+
+.selectedSection {
+  margin-bottom: 25px;
+}
+
+.selectedSection h2 {
+  margin: 0 0 12px;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.selectedDateBox {
+  width: 100%;
+  min-height: 128px;
+
+  background: rgba(255, 240, 224, 0.82);
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 28px;
+
+  gap: 18px;
+}
+
+.selectedDateText {
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   PARTICIPANT FORM
+   ========================================================= */
+
+.formCard {
+  background: rgba(255, 255, 255, 0.90);
+
+  border: 1px solid #ddd;
+
+  border-radius: 27px;
+
+  padding: 28px;
+
+  margin-bottom: 25px;
+}
+
+.formCard h2 {
+  margin: 0 0 22px;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.participantInput {
+  display: block;
+
+  width: 100%;
+  min-height: 150px;
+
+  resize: none;
+
+  border: 1.5px solid #ddd;
+
+  border-radius: 20px;
+
+  background: white;
+
+  padding: 22px;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  font-size: 18px;
+
+  outline: none;
+}
+
+.participantInput::placeholder {
+  color: #aaa;
+}
+
+.participantInput:focus {
+  border-color: #ff9d00;
+}
+
+.infoText {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 16px;
+
+  color: #777;
+}
+
+.infoText svg {
+  flex-shrink: 0;
+
+  color: #e9a326;
+
+  margin-top: 2px;
+}
+
+.infoText p {
+  margin: 0;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TOKEN CARD
+   ========================================================= */
+
+.tokenCard {
+  background: rgba(255, 255, 255, 0.90);
+
+  border: 1px solid #ddd;
+
+  border-radius: 27px;
+
+  padding: 28px;
+
+  margin-bottom: 30px;
+}
+
+.tokenCard h2 {
+  margin: 0 0 22px;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.counter {
+  width: 100%;
+
+  height: 90px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 18px;
+}
+
+.counter span {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.counterButton {
+  width: 55px;
+  height: 55px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #f0f0f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.tokenWarning {
+  margin: 14px 0 0;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.tokenWarning strong {
+  color: #e35f42;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+   ========================================================= */
+
+.bookButton {
+  width: 100%;
+
+  height: 72px;
+
+  border: none;
+
+  border-radius: 38px;
+
+  background: #f26b00;
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 4px 8px rgba(240, 95, 0, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.bookButton:active {
+  transform: scale(0.98);
+}
+
+.bookButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
+.bottomNav {
+  position: fixed;
+
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+
+  height: 82px;
+
+  border-radius: 42px;
+
+  background: rgba(255, 223, 174, 0.95);
+
+  backdrop-filter: blur(15px);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: center;
+
+  padding: 8px;
+
+  box-shadow:
+    0 5px 25px rgba(135, 82, 20, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+
+  z-index: 100;
+}
+
+.navItem {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border-radius: 34px;
+
+  text-decoration: none;
+
+  color: #80786e;
+
+  font-size: 20px;
+
+  transition: 0.2s ease;
+}
+
+.navItem svg {
+  flex-shrink: 0;
+}
+
+.activeNav {
+  background: #ffae00;
+
+  color: white;
+
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(255, 157, 0, 0.25);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .warningCard {
+    padding: 19px;
+    gap: 14px;
+  }
+
+  .warningIcon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .warningContent h3 {
+    font-size: 19px;
+  }
+
+  .warningContent p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .calendarCard {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .weekDays span {
+    font-size: 16px;
+  }
+
+  .dateButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .selectedSection h2 {
+    font-size: 23px;
+  }
+
+  .formCard,
+  .tokenCard {
+    padding: 26px;
+  }
+
+  .bookButton {
+    height: 68px;
+    font-size: 25px;
+  }
+
+  .navItem {
+    font-size: 18px;
+  }
+
+  .navItem svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .warningCard {
+    padding: 16px;
+  }
+
+  .warningIcon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .warningContent p {
+    font-size: 14px;
+  }
+
+  .calendarCard {
+    padding: 22px 10px;
+  }
+
+  .calendarHeader h2 {
+    font-size: 21px;
+  }
+
+  .weekDays span {
+    font-size: 14px;
+  }
+
+  .dateButton {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .formCard,
+  .tokenCard {
+    padding: 20px;
+  }
+
+  .navItem {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .navItem svg {
+    width: 23px;
+    height: 23px;
+  }
+}

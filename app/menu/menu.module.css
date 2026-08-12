@@ -1,0 +1,443 @@
+/* =========================================================
+   DHAMSEVA MENU
+   MOBILE FIRST — MATCHING REFERENCE SCREEN
+   ========================================================= */
+
+.page {
+  width: 100%;
+  height: 100dvh;
+
+  box-sizing: border-box;
+
+  background: #fff6ed;
+  color: #171717;
+
+  padding: 18px 28px 96px;
+
+  overflow: hidden;
+
+  font-family:
+    var(--font-geist-sans),
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   USER HEADER
+   ========================================================= */
+
+.userHeader {
+  width: 100%;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #fff1dc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.profileImage span {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ee9700;
+}
+
+
+.userInfo {
+  flex: 1;
+  min-width: 0;
+
+  margin-left: 18px;
+}
+
+.userInfo h1 {
+  margin: 0;
+
+  font-size: 23px;
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  color: #222;
+}
+
+.userInfo p {
+  margin: 5px 0 0;
+
+  font-size: 17px;
+  line-height: 1.15;
+
+  color: #8b8b8b;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headerArrow {
+  flex-shrink: 0;
+
+  width: 25px;
+  height: 25px;
+
+  color: #999;
+
+  margin-left: 8px;
+}
+
+
+/* =========================================================
+   MENU LIST
+   ========================================================= */
+
+.menuList {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   MENU CARD
+   ========================================================= */
+
+.menuCard {
+  width: 100%;
+  height: 99px;
+  min-height: 99px;
+
+  box-sizing: border-box;
+
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 22px;
+
+  outline: none;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.menuCard:active {
+  transform: scale(0.99);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.iconCircle {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff4e3;
+
+  color: #ee9700;
+}
+
+.iconCircle svg {
+  width: 27px;
+  height: 27px;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.cardText {
+  flex: 1;
+  min-width: 0;
+
+  margin-left: 20px;
+
+  overflow: hidden;
+}
+
+.cardText h2 {
+  width: 100%;
+
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #202020;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardText p {
+  width: 100%;
+
+  margin: 6px 0 0;
+
+  font-size: 16px;
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #929292;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.cardArrow {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  margin-left: 10px;
+
+  color: #999;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logoutIcon {
+  background: #ffebeb;
+  color: #e05252;
+}
+
+.logoutCard .cardText h2 {
+  color: #d95757;
+}
+
+
+/* =========================================================
+   BOTTOM NAV
+   ========================================================= */
+
+.bottomNav {
+  position: fixed;
+
+  left: 20px;
+  right: 20px;
+  bottom: 14px;
+
+  height: 70px;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: center;
+
+  background: #ffe5bc;
+
+  border-radius: 38px;
+
+  z-index: 100;
+}
+
+
+.navItem {
+  height: 58px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #858585;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.navItem svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+.activeNav {
+  background: linear-gradient(
+    135deg,
+    #ffad00,
+    #ff9700
+  );
+
+  color: white;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 12px rgba(255, 153, 0, 0.25);
+}
+
+
+/* =========================================================
+   YOUR 440px MOBILE VIEW
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .page {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+  }
+
+  .userHeader {
+    height: 70px;
+    margin-bottom: 16px;
+  }
+
+  .profileImage {
+    width: 52px;
+    height: 52px;
+  }
+
+  .userInfo {
+    margin-left: 14px;
+  }
+
+  .userInfo h1 {
+    font-size: 21px;
+  }
+
+  .userInfo p {
+    font-size: 15px;
+  }
+
+  .menuList {
+    gap: 10px;
+  }
+
+  .menuCard {
+    height: 91px;
+    min-height: 91px;
+
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .iconCircle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .iconCircle svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .cardText {
+    margin-left: 15px;
+  }
+
+  .cardText h2 {
+    font-size: 18px;
+  }
+
+  .cardText p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .cardArrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .bottomNav {
+    left: 14px;
+    right: 14px;
+    bottom: 10px;
+    height: 66px;
+  }
+
+  .navItem {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .navItem svg {
+    width: 23px;
+    height: 23px;
+  }
+}

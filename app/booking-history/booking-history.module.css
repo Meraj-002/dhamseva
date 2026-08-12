@@ -1,0 +1,502 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 225, 195, 0.15) 0,
+      rgba(255, 231, 210, 0.35) 390px,
+      #f8dfd0 1080px
+    ),
+    url("/images/temple-bg.png");
+
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  padding: 0 0 40px;
+  color: #111;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  height: 242px;
+
+  display: grid;
+  grid-template-columns: 72px 1fr 72px;
+  align-items: start;
+
+  padding: 91px 29px 0;
+}
+
+.iconButton {
+  width: 72px;
+  height: 72px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111;
+  cursor: pointer;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.headerText {
+  text-align: center;
+  padding-top: 0;
+}
+
+.headerText h1 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.headerText p {
+  margin: 10px 0 0;
+
+  font-size: 23px;
+  line-height: 1.2;
+
+  color: #8d8d8d;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TOKEN CARD
+========================= */
+
+.tokenCard {
+  width: calc(100% - 72px);
+  margin: 0 auto;
+
+  min-height: 137px;
+
+  border-radius: 32px;
+
+  background: rgba(255, 222, 181, 0.88);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 31px;
+}
+
+.tokenLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tokenIcon {
+  width: 82px;
+  height: 82px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ed6500;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tokenLabel {
+  margin: 0 0 5px;
+
+  font-size: 23px;
+  line-height: 1;
+
+  color: #999;
+}
+
+.tokenLeft h2 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.members {
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 15px 25px;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #cf6b2d;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.tabsWrapper {
+  width: calc(100% - 72px);
+  margin: 38px auto 0;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+.tab {
+  flex: 0 0 auto;
+
+  height: 64px;
+
+  padding: 0 34px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: white;
+
+  color: #969696;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.activeTab {
+  background: #ec6500;
+  color: white;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   HELP CARD
+========================= */
+
+.helpCard {
+  width: calc(100% - 72px);
+
+  min-height: 156px;
+
+  margin: 73px auto 0;
+
+  border-radius: 30px;
+
+  background: rgba(247, 226, 208, 0.85);
+
+  display: flex;
+  align-items: center;
+
+  padding: 25px 29px;
+
+  gap: 22px;
+}
+
+.helpIcon {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: white;
+  color: #e96809;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpText {
+  flex: 1;
+  min-width: 0;
+}
+
+.helpText h3 {
+  margin: 0 0 5px;
+
+  font-size: 25px;
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.helpText p {
+  margin: 0;
+
+  font-size: 23px;
+  line-height: 1.25;
+
+  color: #999;
+}
+
+.contactButton {
+  flex-shrink: 0;
+
+  height: 72px;
+
+  padding: 0 43px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: #ed6500;
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .page {
+    min-height: 100vh;
+
+    background-size: auto 430px;
+    background-position: top center;
+
+    padding-bottom: 20px;
+  }
+
+  .header {
+    height: 242px;
+
+    grid-template-columns: 72px 1fr 72px;
+
+    padding: 91px 29px 0;
+  }
+
+  .iconButton {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 20px;
+  }
+
+  .headerText h1 {
+    font-size: 37px;
+  }
+
+  .headerText p {
+    font-size: 22px;
+    margin-top: 8px;
+  }
+
+  .tokenCard {
+    width: calc(100% - 72px);
+
+    min-height: 137px;
+
+    padding: 25px 29px;
+
+    border-radius: 31px;
+  }
+
+  .tokenIcon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .tokenLeft {
+    gap: 19px;
+  }
+
+  .tokenLabel {
+    font-size: 22px;
+  }
+
+  .tokenLeft h2 {
+    font-size: 31px;
+  }
+
+  .members {
+    font-size: 21px;
+    padding: 14px 23px;
+  }
+
+  .tabsWrapper {
+    width: calc(100% - 72px);
+
+    margin-top: 37px;
+
+    gap: 17px;
+  }
+
+  .tab {
+    height: 64px;
+
+    padding: 0 32px;
+
+    font-size: 23px;
+  }
+
+  .helpCard {
+    width: calc(100% - 72px);
+
+    margin-top: 73px;
+
+    min-height: 156px;
+
+    padding: 25px 28px;
+
+    gap: 20px;
+  }
+
+  .helpIcon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .helpText h3 {
+    font-size: 24px;
+  }
+
+  .helpText p {
+    font-size: 22px;
+  }
+
+  .contactButton {
+    height: 72px;
+
+    padding: 0 40px;
+
+    font-size: 24px;
+  }
+}
+
+
+/* Smaller phones */
+@media (max-width: 390px) {
+  .header {
+    grid-template-columns: 58px 1fr 58px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .iconButton {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+  }
+
+  .headerText h1 {
+    font-size: 27px;
+  }
+
+  .headerText p {
+    font-size: 17px;
+  }
+
+  .tokenCard,
+  .tabsWrapper,
+  .helpCard {
+    width: calc(100% - 40px);
+  }
+
+  .tokenCard {
+    padding: 18px;
+  }
+
+  .tokenIcon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .tokenLeft {
+    gap: 12px;
+  }
+
+  .tokenLabel {
+    font-size: 17px;
+  }
+
+  .tokenLeft h2 {
+    font-size: 23px;
+  }
+
+  .members {
+    font-size: 14px;
+    padding: 11px 14px;
+  }
+
+  .tabsWrapper {
+    gap: 10px;
+  }
+
+  .tab {
+    height: 52px;
+    padding: 0 22px;
+    font-size: 18px;
+  }
+
+  .helpCard {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .helpIcon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .helpText h3 {
+    font-size: 19px;
+  }
+
+  .helpText p {
+    font-size: 16px;
+  }
+
+  .contactButton {
+    height: 56px;
+    padding: 0 20px;
+    font-size: 18px;
+  }
+}
