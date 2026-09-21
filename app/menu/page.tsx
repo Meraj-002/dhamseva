@@ -54,6 +54,7 @@ export default function MenuPage() {
 
   function handleLogout() {
     // Later we will connect this with Supabase logout.
+    localStorage.removeItem("dhamseva_user");
     router.push("/");
   }
 

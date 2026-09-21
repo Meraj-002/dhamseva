@@ -31,49 +31,61 @@ export default function ProfilePage() {
   const [avatarFile, setAvatarFile] = useState<File | null>(null);
 
   useEffect(() => {
-    loadProfile();
-  }, []);
+    let active = true;
 
-  async function loadProfile() {
-    try {
-      setLoading(true);
+    (async () => {
+      try {
+        const stored = localStorage.getItem("dhamseva_user");
 
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
+        if (!stored) {
+          router.push("/login");
+          return;
+        }
 
-      if (authError || !user) {
+        const parsed = JSON.parse(stored);
+        const id = parsed?.id;
+
+        if (!id) {
+          router.push("/login");
+          return;
+        }
+
+        setUserId(id);
+
+        const { data, error } = await supabase
+          .from("profiles")
+          .select(
+            "id, full_name, mobile, email, address, avatar_url"
+          )
+          .eq("id", id)
+          .single();
+
+        if (error) {
+          console.error("Profile fetch error:", error);
+          return;
+        }
+
+        if (!active) return;
+
+        setFullName(data?.full_name || "");
+        setMobile(data?.mobile || "");
+        setEmail(data?.email || "");
+        setAddress(data?.address || "");
+        setAvatarUrl(data?.avatar_url || "");
+      } catch (error) {
+        console.error(error);
         router.push("/login");
-        return;
+      } finally {
+        if (active) {
+          setLoading(false);
+        }
       }
+    })();
 
-      setUserId(user.id);
-
-      const { data, error } = await supabase
-        .from("profiles")
-        .select(
-          "id, full_name, mobile, email, address, avatar_url"
-        )
-        .eq("id", user.id)
-        .single();
-
-      if (error) {
-        console.error("Profile fetch error:", error);
-        return;
-      }
-
-      setFullName(data?.full_name || "");
-      setMobile(data?.mobile || "");
-      setEmail(data?.email || user.email || "");
-      setAddress(data?.address || "");
-      setAvatarUrl(data?.avatar_url || "");
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }
+    return () => {
+      active = false;
+    };
+  }, [router]);
 
   function handleAvatarChange(
     event: React.ChangeEvent<HTMLInputElement>

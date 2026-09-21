@@ -47,7 +47,10 @@ export default function LoginPage() {
       // Simple login — no Supabase Auth
       localStorage.setItem("dhamseva_user", JSON.stringify(data));
 
-      router.push("/");
+      router.push("/home");
+    } catch (err) {
+      console.error(err);
+      setError("Unable to reach server. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -58,10 +61,11 @@ export default function LoginPage() {
       {/* HERO */}
       <section className={styles.hero}>
         <Image
-          src="/pitra-dham.png"
+          src="/logo.png"
           alt="Pitra Dham"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImage}
         />
       </section>
